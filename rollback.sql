@@ -1,0 +1,2 @@
+START TRANSACTION; UPDATE tbl_innodb SET oa_id = 0 WHERE oa_id =2756; DELETE FROM tbl_mroonga WHERE a_id = 2756; ROLLBACK WORK;
+START TRANSACTION; UPDATE tbl_innodb SET oa_id = 0 WHERE oa_id =0; DELETE FROM tbl_mroonga WHERE a_id = 2756; ROLLBACK WORK;
