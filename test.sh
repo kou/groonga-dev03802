@@ -10,11 +10,9 @@ do
 
     ${=MYSQL} db_test < recover.sql
     rm -f run.sql
-    echo $((count / 200))
-    for i in {0..$((count / 200))}
+    for i in {0..$((count / 2))}
     do
 	${=MYSQL} -N db_test < while.sql >> run.sql
-	echo ${i}
     done
     echo "Null" >> run.sql
     echo "Null" >> run.sql
